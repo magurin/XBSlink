@@ -19,7 +19,7 @@
  * with this program; If not, see <http://www.gnu.org/licenses/>
  */
 
-namespace XBSlink
+namespace XBSLink
 {
     partial class DebugWindow
     {
@@ -52,7 +52,7 @@ namespace XBSlink
             this.components = new System.ComponentModel.Container();
             this.button_clear = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.listBox_messages = new XBSlink.DebugWindowListBox();
+            this.listBox_messages = new XBSLink.DebugWindowListBox();
             this.SuspendLayout();
             // 
             // button_clear

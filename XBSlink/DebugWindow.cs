@@ -28,7 +28,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace XBSlink
+namespace XBSLink
 {
     public partial class DebugWindow : Form
     {

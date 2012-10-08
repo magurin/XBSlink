@@ -38,7 +38,7 @@ using SharpPcap;
 using SharpPcap.LibPcap;
 using SharpPcap.WinPcap;
 using MiscUtil.Conversion;
-using XBSlink.Properties;
+using XBSLink.Properties;
 using System.ServiceModel.Syndication;
 using System.Xml;
 using System.Linq;
@@ -48,7 +48,7 @@ using System.Xml.Linq;
 [assembly: RegistryPermissionAttribute(SecurityAction.RequestMinimum,
     ViewAndModify = "HKEY_CURRENT_USER")]
 
-namespace XBSlink
+namespace XBSLink
 {
     partial class FormMain : Form
     {
@@ -320,10 +320,18 @@ namespace XBSlink
             if (textBox_chatNickname.Text == "")
                 textBox_chatNickname.Text = xbs_chat.STANDARD_NICKNAME;
         }
-       
+
+        public static string GetFriendList()
+        {
+            return "magurin";
+        }
+
         private void saveRegistryValues()
         {
             Settings s = xbs_settings.settings;
+
+            s.REG_FRIENDLIST = GetFriendList();
+
             int out_int;
 			if (comboBox_captureDevice.SelectedItem!=null)
             	s.REG_CAPTURE_DEVICE_NAME = comboBox_captureDevice.SelectedItem.ToString();
@@ -357,6 +365,7 @@ namespace XBSlink
             s.REG_NEWS_FEED_URI = textBox_newsFeedUri.Text;
             s.REG_NEWS_FEED_SWITCH_TO_TAB = checkBox_switchToNewsTab.Checked;
             s.Save();
+            
         }
 
         // -----------------------------------------------------

@@ -23,7 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace XBSlink
+namespace XBSLink
 {
     static class Program
     {
@@ -47,8 +47,7 @@ namespace XBSlink
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-
-                try
+                               try
                 {
                     main_form = new FormMain();
                 }

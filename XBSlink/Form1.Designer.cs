@@ -19,7 +19,7 @@
  * with this program; If not, see <http://www.gnu.org/licenses/>
  */
 
-namespace XBSlink
+namespace XBSLink
 {
     partial class FormMain
     {
@@ -271,7 +271,7 @@ namespace XBSlink
             // toolStripStatusLabel_icon
             // 
             this.toolStripStatusLabel_icon.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripStatusLabel_icon.Image = global::XBSlink.Properties.Resources.ok_16;
+            this.toolStripStatusLabel_icon.Image = global::XBSLink.Properties.Resources.ok_16;
             this.toolStripStatusLabel_icon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripStatusLabel_icon.Name = "toolStripStatusLabel_icon";
             this.toolStripStatusLabel_icon.Size = new System.Drawing.Size(54, 17);

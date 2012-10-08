@@ -19,7 +19,7 @@
  * with this program; If not, see <http://www.gnu.org/licenses/>
  */
 
-namespace XBSlink
+namespace XBSLink
 {
     partial class ExceptionMessage
     {
@@ -70,7 +70,7 @@ namespace XBSlink
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::XBSlink.Properties.Resources.error_50;
+            this.pictureBox1.Image = global::XBSLink.Properties.Resources.error_50;
             this.pictureBox1.Location = new System.Drawing.Point(4, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 57);

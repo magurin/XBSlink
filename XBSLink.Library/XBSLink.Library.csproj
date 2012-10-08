@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E25778C-03CD-4751-A2B1-4DE07DCAE333}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XBSLink.Library</RootNamespace>
+    <AssemblyName>XBSLink.Library</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChatAudio\chat_audio.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="General\Message\xlink_server_create_cloud_message.cs" />
+    <Compile Include="General\Message\xlink_server_user_pm_message.cs" />
+    <Compile Include="General\Message\xlink_server_my_pm_message.cs" />
+    <Compile Include="General\Message\xlink_server_user_offline_message.cs" />
+    <Compile Include="General\Message\xlink_server_user_online_message.cs" />
+    <Compile Include="General\Message\xlink_server_user_chat_message.cs" />
+    <Compile Include="General\Message\xlink_create_cloud_create_join_message.cs" />
+    <Compile Include="General\Message\xlink_server_my_chat_message.cs" />
+    <Compile Include="General\Message\xlink_server_info_message.cs" />
+    <Compile Include="General\xbs_cloud.cs" />
+    <Compile Include="General\Message\xlink_get_clouds_message.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\xbs_cloudlist.cs" />
+    <Compile Include="Engine\xbs_constants.cs" />
+    <Compile Include="Engine\xbs_messages.cs" />
+    <Compile Include="Engine\xbs_nat.cs" />
+    <Compile Include="Engine\xbs_natstun.cs" />
+    <Compile Include="Engine\xbs_node.cs" />
+    <Compile Include="Engine\xbs_node_list.cs" />
+    <Compile Include="Engine\xbs_node_message.cs" />
+    <Compile Include="Engine\xbs_settings.cs" />
+    <Compile Include="Engine\xbs_sniffer.cs" />
+    <Compile Include="Engine\xbs_system_functions.cs" />
+    <Compile Include="Engine\xbs_udp_listener.cs" />
+    <Compile Include="General\xlink_client_messages_clouds_helper.cs" />
+    <Compile Include="RemoteControl\xlink_server_cloud_console_process.cs" />
+    <Compile Include="RemoteControl\xlink_server_cloud.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mono.Nat\Mono.Nat.csproj">
+      <Project>{f5d74163-145f-47bf-83dc-d0e07249c6ca}</Project>
+      <Name>Mono.Nat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PacketDotNet\PacketDotNet.csproj">
+      <Project>{55abba4c-aaf9-4726-a592-0c92436cec92}</Project>
+      <Name>PacketDotNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpPcap\SharpPcap.csproj">
+      <Project>{24262e52-1304-4a25-8f73-a3b06e40592e}</Project>
+      <Name>SharpPcap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XBSLink.Library.XLinkKai\XBSLink.Library.XLinkKai.csproj">
+      <Project>{1d560a92-4224-4638-8e9d-0b42f25f9219}</Project>
+      <Name>XBSLink.Library.XLinkKai</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\about_xbslink.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XBSlink.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
