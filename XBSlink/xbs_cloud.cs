@@ -19,5 +19,10 @@ namespace XBSlink.Common
             this.max_nodes = max_nodes;
             this.isPrivate = isPrivate;
         }
+
+		public string GetCloudListDesription() {
+			return String.Format("({0}/{1}) Private:{2}", node_count.ToString(), max_nodes.ToString(), isPrivate.ToString());
+		}
+
     }
 }
